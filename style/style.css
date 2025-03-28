@@ -1,0 +1,363 @@
+/* 
+
+ weights : 500 700
+
+*/
+
+.card{
+  width: 65%;
+border-radius: 2rem;
+overflow: hidden;
+display: flex;
+background: var(--neutral-color-white);
+}
+.primary-card{
+  width: 50%;
+    background-color: white;
+    padding: 3rem 2.5rem;
+}
+.mortgage-calculator{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+    gap: 8rem;
+    font-size: 1rem;
+}
+.mortgage-calculator h3{
+    color: var(--neutral-color-slate-900);
+    font-size: 2rem;
+}
+.mortgage-calculator span{
+    color: var(--neutral-color-slate-700);
+    text-decoration: underline;
+    cursor: pointer;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2.5rem;
+}
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.dad-mortgage-amount {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-desing{
+    display: flex;
+    
+    border: solid .15rem var(--neutral-color-slate-700);
+    overflow: hidden;
+    border-radius: .5rem;
+}
+.mortgage-desing{
+    width: 100%;
+    background: var(--neutral-color-slate-100);
+     cursor: pointer;
+}
+
+
+.mortgage-desing:hover{
+    background: var(--primary-color-lime);
+    border-color:var(--primary-color-lime) ;
+    color: var(--neutral-color-slate-900);
+}
+.input-amount{
+    width: 100%;
+}
+.mortgage-amount p{
+    padding: 1rem;
+}
+.labelDisign{
+    color: var(--neutral-color-slate-700) !important;
+    font-weight: 500 !important;
+ padding-bottom: 1rem !important;
+ 
+ 
+}
+
+
+
+
+
+
+
+
+/* part */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .radio-label {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    margin-bottom: 01rem;
+    background-color: #fff;
+    border: .15rem solid var(--neutral-color-slate-900);
+    border-radius: .6rem;
+    
+  }
+  
+  .radio-label:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .radio-input {
+    position: absolute;
+    opacity: 0
+  }
+  
+  .radio-input:checked + .radio-label {
+    background-color: hsla(61, 70%, 52%, 0.256);
+    border-color: var(--primary-color-lime);
+  }
+  
+  /* .radio-input:focus + .radio-label {
+    outline: 2px solid var(--primary-color-lime);
+  } */
+
+  .radio-inner-circle {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 2px solid var(--neutral-color-slate-900);
+    border-radius: 50%;
+    margin-right: 0.5em;
+    transition: border-color 0.2s;
+    position: relative;
+  }
+  
+  .radio-label:hover .radio-inner-circle {
+    border-color: var(--neutral-color-slate-900);
+  }
+  
+  .radio-input:checked + .radio-label .radio-inner-circle {
+    border-color: var(--primary-color-lime);
+  }
+  
+  .radio-input:checked + .radio-label .radio-inner-circle::after {
+    content: '';
+    display: block;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: var(--primary-color-lime);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+      
+/* end */
+
+
+
+
+
+
+
+ input{
+padding: 1rem;
+    border: none;
+    outline: none;
+    color: var(--neutral-color-slate-900);
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.term-rate{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+.dad-mortgage-term,
+.dad-mortgage-rate{
+    width: 100%;
+}
+.term-rate input{
+    width: 100%;
+}
+.dad-mortgage-type{
+    width: 100%;
+}
+.dad-mortgage-type label{
+color: var(--neutral-color-slate-900);
+font-weight: 700;
+padding: 1rem;
+
+}
+
+.amount-mon{
+    width: 4rem;
+}
+.mortgage-yrs{
+    width: 6rem;
+}
+.mortgage-psnt{
+    padding: 1rem;
+}
+.mortgage-yrs,
+.mortgage-psnt,
+.amount-mon{
+    padding: 1rem;
+    text-align: center;
+    height: 4rem;
+   color: var(--neutral-color-slate-700);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.submit-lbl{
+    cursor: pointer;
+    background: var(--primary-color-lime);
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    font-weight: 700;
+     color: var(--neutral-color-slate-900);
+     gap: 1rem;
+ }
+
+
+
+
+ /* secondry card */
+
+
+ .secondry-card{
+  background:var(--neutral-color-slate-900);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 50%;
+  border-radius: 0 0 0 5rem;
+  padding: 1rem;
+ }
+
+
+ .result{
+color: var(--neutral-color-white);
+font-size: 2.2rem;
+font-weight: 600;
+ }
+ .paragraph{
+  
+  text-align: center;
+  color: var(--neutral-color-slate-300);
+ }
+
+
+
+ /*  */
+
+ .page-2{
+  padding: 2rem;
+  height: 100%;
+ }
+
+ .paragraph-2{
+  color: var(--neutral-color-slate-300);
+  padding:  2rem  0;
+  line-height: 1.5;
+
+ }
+
+ .all-result{
+  overflow: hidden;
+  background-color:hsl(202, 90%, 12%) ;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  padding: 2rem;
+  border-radius: .5rem;
+  border-top: solid var(--primary-color-lime) ;
+ }
+ .Your-monthly{
+  color: var(--neutral-color-slate-300);
+ }
+
+.finly-result{
+  font-size: 6rem;
+  color: var(--primary-color-lime);
+  padding-bottom: 3rem;
+  border-bottom: solid hsla(203, 41%, 72%, 0.144) .2rem;
+}
+.total{
+color: var(--neutral-color-slate-300);
+padding:3rem  0 1.5rem 0  ;
+
+}
+.total-price{
+  font-size: 3.5rem;
+}
+
+/* .if-not{
+  background: var(--primary-color-red);
+  border: solid var(--primary-color-red) .1rem;
+  color: var(--neutral-color-slate-100) !important;
+ 
+}
+
+.if-not:hover{
+  background: var(--primary-color-red);
+  border: solid var(--primary-color-red) .1rem;
+  color: var(--neutral-color-slate-100) !important;
+ 
+} */
+
+.changeColorBlue{
+color: var(--neutral-color-slate-900) !important;
+}
+
+
+
+
+
+
+@media screen and (max-width:50rem) {
+  
+
+  .card{
+    width: 100%;
+  border-radius:0;
+  flex-direction: column;
+  }
+
+
+
+  .primary-card{
+    width: 100%;
+      background-color: white;
+      padding: 3rem 2.5rem;
+  }
+  .secondry-card{
+    gap: 2rem;
+    width: 100%;
+    border-radius: 0 0 0 0 ;
+    padding: 1rem;
+   }
+  
+}
