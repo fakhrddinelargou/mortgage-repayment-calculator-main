@@ -26,29 +26,40 @@
       <div class="primary-card">
         <div class="mortgage-calculator">
           <h3>Mortgage Calculator</h3>
-          <span>Clear All</span>
+          <span onclick="clearAll()">Clear All</span>
         </div>
         <form  onsubmit="event.preventDefault(); " >
           <div class="dad-mortgage-amount">
             <label for="mortgage-amount" class="labelDisign">Mortgage Amount</label>
             <div class="mortgage-amount input-desing mortgage-desing if-not  check"  >
               <p class="amount-mon changeColor">$</p>
-              <input class="input-amount" type="number" required min="1" max="1000000" id="mortgage-amount" name="amount"  />
+              <input class="input-amount" type="number" required min="1" max="1000000" id="mortgage-amount" name="amount" spellcheck="false " onkeyup="amountValide()" />
             </div>
+            <div class="box-error">
+
+              <p class="error1 hidden ">This field is required</p>
+            </div>
+
           </div>
           <div class="term-rate">
             <div class="dad-mortgage-term">
               <div  class="labelDisign">Mortgage Term</div>
               <div class="mortgage-term input-desing mortgage-desing check">
-                <input class="" type="number" id="mortgage-term" min="1" max="70" name="term"  required />
+                <input class="" type="number" id="mortgage-term" min="1" max="70" name="term"  required spellcheck="false " onkeyup="termValide()" />
                 <p class="mortgage-yrs changeColor">years</p>
               </div>
+              <div class="box-error"></div>
+              <p class="error2 hidden">This field is required</p>
             </div>
             <div class="dad-mortgage-rate">
               <div class="labelDisign"> Interest Rate </div>
               <div class="mortgage-rate input-desing mortgage-desing check">
-                <input class="" type="number" id="mortgage-rate" min="1" max="100" name="rate" required />
+                <input class="" type="number" id="mortgage-rate" min="1" max="100" name="rate" required  spellcheck="false " onkeyup="rateValide()" />
                 <p class="mortgage-psnt changeColor">%</p>
+              </div>
+              <div class="box-error">
+
+                <p class="error3 hidden">This field is required</p>
               </div>
             </div>
           </div>

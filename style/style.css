@@ -73,9 +73,9 @@ input[type="number"]::-webkit-outer-spin-button {
 .input-amount{
     width: 100%;
 }
-.mortgage-amount p{
-    padding: 1rem;
-}
+/* .mortgage-amount p{
+    
+} */
 .labelDisign{
     color: var(--neutral-color-slate-700) !important;
     font-weight: 500 !important;
@@ -182,6 +182,8 @@ padding: 1rem;
 .dad-mortgage-term,
 .dad-mortgage-rate{
     width: 100%;
+
+    height: 10vh;
 }
 .term-rate input{
     width: 100%;
@@ -197,7 +199,8 @@ padding: 1rem;
 }
 
 .amount-mon{
-    width: 4rem;
+    width: 4.7rem;
+    
 }
 .mortgage-yrs{
     width: 6rem;
@@ -332,9 +335,25 @@ padding:3rem  0 1.5rem 0  ;
 color: var(--neutral-color-slate-900) !important;
 }
 
+.box-error{
+  height: 3rem;
 
+  position: relative;
+  
+}
 
+.error1,.error2,.error3{
+padding-top: .6rem;
+font-size: 1.2rem;
+color: var(--primary-color-red);
 
+}
+
+@media screen and (max-width:115rem) {
+  .card{
+    width: 85%;
+  }
+}
 
 
 @media screen and (max-width:50rem) {
@@ -359,5 +378,27 @@ color: var(--neutral-color-slate-900) !important;
     border-radius: 0 0 0 0 ;
     padding: 1rem;
    }
+   .term-rate{
+    flex-direction: column;
+    gap: 8rem;
+    margin-bottom: 6rem;
+}
+
+.submit-lbl{
+ 
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+width: 100%;
+   gap: 1rem;
+   margin-top: 1.5rem;
+}
+input{
+  padding: 1.5rem;
+}
   
 }
+
+
+
+
