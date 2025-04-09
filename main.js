@@ -13,7 +13,39 @@ const amountMon = document.querySelector(".amount-mon");
 const error1 = document.querySelector(".error1");
 const error2 = document.querySelector(".error2");
 const error3 = document.querySelector(".error3");
+const error4 = document.querySelector('.error4')
 const radioInput = document.querySelectorAll(".radio-input");
+
+
+
+
+
+
+
+function radioValide(){
+
+  
+  const radioButtons = document.querySelectorAll('input[name="option"]');
+  
+  
+  const isRadioSelected = Array.from(radioButtons).some(radio => radio.checked);
+  
+  
+  if (!isRadioSelected) {
+    error4.classList.remove('hidden')
+  } else {
+    error4.classList.add('hidden')
+  }
+  
+}
+
+
+
+
+
+
+
+
 
 function amountValide() {
   let inputAmountValue = parseFloat(inputAmount.value);
@@ -47,7 +79,7 @@ function termValide() {
     divTerm.style.backgroundColor = "hsl(4, 69%, 50%)";
     divTerm.style.border = " solid  hsl(4, 69%, 50%)  .15rem";
     mortgageYrs.style.color = "white";
-    console.log("not");
+ 
     error2.classList.remove("hidden");
     return false;
   }
@@ -69,6 +101,7 @@ function rateValide() {
     return false;
   }
 }
+
 function addButton() {
   let inputAmountValue = inputAmount.value;
   let inputTermValue = inputTerm.value;
@@ -80,8 +113,10 @@ function addButton() {
     inputRateValue > 0 &&
     inputRateValue <= 100 &&
     inputTermValue >= 1 &&
-    inputTermValue <= 50
+    inputTermValue <= 50 
+    
   ) {
+  
     let TotalPayment =
       (inputAmountValue * inputRateValue) /
       (1 - Math.pow(1 + inputRateValue, -inputTermValue));
@@ -89,25 +124,35 @@ function addButton() {
 
     let monthlyPayment = TotalPayment / In;
     
-    secondryCard.innerHTML = `
-      <div class="page-2">
-      <span class="result">Your results</span>
-      <p class="paragraph-2">Your result are shown below based on the information you provided. To adjust the result, edit the form and click"calculate repayment" again</p>
-      <div class="all-result">
-      <span class="Your-monthly">Your monthly repayments</span>
-      <span class="finly-result" id="monthlyPayment">$${monthlyPayment.toFixed(
-        2
-      )}</span>
-      <span class="total">Total you'll repay over the them</span>
-      <span class="total-price">$${TotalPayment.toFixed(2)}</span>
-      </div>
-      </div>
+    
+    const radioButtons = document.querySelectorAll('input[name="option"]');
+    const isRadioSelected = Array.from(radioButtons).some(radio => radio.checked);
+    if (!isRadioSelected) {
+      error4.classList.remove('hidden')
+    } else {
+      error4.classList.add('hidden')
+      secondryCard.innerHTML = `
+        <div class="page-2">
+        <span class="result">Your results</span>
+        <p class="paragraph-2">Your result are shown below based on the information you provided. To adjust the result, edit the form and click"calculate repayment" again</p>
+        <div class="all-result">
+        <span class="Your-monthly">Your monthly repayments</span>
+        <span class="finly-result" id="monthlyPayment">$${monthlyPayment.toFixed(
+          2
+        )}</span>
+        <span class="total">Total you'll repay over the them</span>
+        <span class="total-price">$${TotalPayment.toFixed(2)}</span>
+        </div>
+        </div>
+        
+        `;
+      }
       
-      `;
   } else {
     amountValide();
     termValide();
     rateValide();
+    radioValide()
   }
 }
 

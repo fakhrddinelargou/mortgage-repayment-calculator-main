@@ -23,7 +23,7 @@
         <h3>Mortgage Calculator</h3>
         <span onclick="clearAll()">Clear All</span>
       </div>
-      <form onsubmit="event.preventDefault(); ">
+      <form onsubmit="event.preventDefault();  " id="myForm">
         <div class="dad-mortgage-amount">
           <label for="mortgage-amount" class="labelDisign">Mortgage Amount</label>
           <div class="mortgage-amount mortgage-desing ">
@@ -64,19 +64,22 @@
         <div class="dad-mortgage-type">
           <label class="labelDisign">Mortgage Type</label>
           <div class="radio-group">
-            <input class="radio-input" name="radio-group" id="radio1" type="radio" >
+            <input class="radio-input" name="option" id="radio1" type="radio"  >
             <label class="radio-label" for="radio1">
               <span class="radio-inner-circle"></span>
               Repayment
             </label>
 
-            <input class="radio-input" name="radio-group" id="radio2" type="radio" >
+            <input class="radio-input" name="option" id="radio2" type="radio"  >
             <label class="radio-label" for="radio2">
               <span class="radio-inner-circle"></span>
               Interest Only
             </label>
 
+            <div class="box-error">
 
+              <p class="error4 hidden  ">This field is required</p>
+            </div>
           </div>
 
 

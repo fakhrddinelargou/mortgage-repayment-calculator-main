@@ -1,4 +1,5 @@
 .card {
+ 
   width: 65%;
   border-radius: 2rem;
   overflow: hidden;
@@ -35,7 +36,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -45,8 +46,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input {
-  width: 100%;
-  padding: 1.2rem;
+ width: 100%;
+
+  padding: 1rem;
   border: none;
   outline: none;
   color: var(--neutral-color-slate-900);
@@ -86,6 +88,7 @@ input {
   width: 100%;
   display: flex;
   flex-direction: column;
+  
 }
 
 
@@ -95,7 +98,7 @@ input {
   color: var(--neutral-color-slate-900);
   font-weight: 700;
   padding: 1rem;
-
+ width: 100%;
 }
 
 
@@ -134,7 +137,6 @@ input {
 }
 
 .radio-input {
-  position: absolute;
   opacity: 0;
 }
 
@@ -281,7 +283,8 @@ input {
 
 .error1,
 .error2,
-.error3 {
+.error3,
+.error4 {
   background: var(--neutral-color-white);
   font-size: 1.2rem;
   color: var(--primary-color-red);
