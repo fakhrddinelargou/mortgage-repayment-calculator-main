@@ -119,7 +119,11 @@ input {
   border-color: var(--primary-color-lime);
   color: var(--neutral-color-slate-900) !important ;
 }
+.active:hover{
+  border-color: var(--primary-color-lime);
+  
 
+}
 
 
 .labelDisign {
