@@ -47,12 +47,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input {
  width: 100%;
-
   padding: 1rem;
   border: none;
   outline: none;
   color: var(--neutral-color-slate-900);
   font-weight: 700;
+ font-size: 1.6rem;
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -61,9 +61,9 @@ input {
 .dad-mortgage-rate,
 .dad-mortgage-amount {
   width: 100%;
-
   display: flex;
   flex-direction: column;
+
 }
 
 .mortgage-desing {
@@ -71,17 +71,28 @@ input {
   background: var(--neutral-color-slate-100);
   cursor: pointer;
   display: flex;
-  border: solid 0.15rem var(--neutral-color-slate-700);
+  align-items: center;
+  
+  border: solid 0.11rem var(--neutral-color-slate-700);
   overflow: hidden;
-  border-radius: 0.5rem;
-
+  border-radius: 0.4rem;
+  color: var(--neutral-color-slate-700);
 }
+
+.mortgage-desing:hover{
+
+  border-color: var(--neutral-color-slate-900);
+}
+
 
 
 .term-rate {
   display: flex;
   gap: 2rem;
+ 
   width: 100%;
+  
+  
 }
 
 .dad-mortgage-type {
@@ -97,15 +108,16 @@ input {
 .dad-mortgage-type label {
   color: var(--neutral-color-slate-900);
   font-weight: 700;
-  padding: 1rem;
  width: 100%;
+
+
 }
 
 
-.mortgage-desing:hover {
+.active{
   background: var(--primary-color-lime);
   border-color: var(--primary-color-lime);
-  color: var(--neutral-color-slate-900);
+  color: var(--neutral-color-slate-900) !important ;
 }
 
 
@@ -126,14 +138,16 @@ input {
   display: flex;
   align-items: center;
   padding: 0.5em;
-  margin-bottom: 01rem;
+  height: 5rem;
   background-color: #fff;
-  border: 0.15rem solid var(--neutral-color-slate-900);
-  border-radius: 0.6rem;
+  border: 0.11rem solid var(--neutral-color-slate-900);
+  border-radius: 0.4rem;
+
 }
 
 .radio-label:hover {
-  background-color: #e6e6e6;
+  background-color: hsla(60, 74%, 94%, 0.158);
+  border-color: var(--primary-color-lime);
 }
 
 .radio-input {
@@ -150,7 +164,7 @@ input {
   display: inline-block;
   width: 1em;
   height: 1em;
-  border: 2px solid var(--neutral-color-slate-900);
+  border: .15rem solid var(--neutral-color-slate-900);
   border-radius: 50%;
   margin-right: 0.5em;
   transition: border-color 0.2s;
@@ -181,13 +195,9 @@ input {
 
 
 
-.mortgage-yrs,
-.mortgage-psnt,
-.amount-mon {
-  padding: 1rem;
+.iconDesing {
   text-align: center;
-  height: 4rem;
-  color: var(--neutral-color-slate-700);
+  padding: 0 1.5rem  ;
 }
 
 .submit-lbl {
@@ -200,6 +210,9 @@ input {
   font-weight: 700;
   color: var(--neutral-color-slate-900);
   gap: 1rem;
+}
+.submit-lbl:hover{
+  background-color: hsla(61, 70%, 52%, 0.676);
 }
 
 /* secondry card */
@@ -276,18 +289,20 @@ input {
 }
 
 .box-error {
-  height: 1rem;
-  background: var(--neutral-color-white);
+  height: 3rem;
+padding-top: 1rem;
 
 }
+
 
 .error1,
 .error2,
 .error3,
 .error4 {
-  background: var(--neutral-color-white);
-  font-size: 1.2rem;
+
+  font-size: 1.1rem;
   color: var(--primary-color-red);
+  
 }
 
 @media screen and (max-width: 115rem) {
@@ -318,8 +333,8 @@ input {
 
   .term-rate {
     flex-direction: column;
-    gap: 8rem;
-    margin-bottom: 6rem;
+    gap: 0rem;
+    
   }
 
   .submit-lbl {

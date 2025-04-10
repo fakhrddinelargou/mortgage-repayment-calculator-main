@@ -27,8 +27,8 @@
         <div class="dad-mortgage-amount">
           <label for="mortgage-amount" class="labelDisign">Mortgage Amount</label>
           <div class="mortgage-amount mortgage-desing ">
-            <p class="amount-mon changeColor">$</p>
-            <input class="input-amount" type="number"  min="1" max="1000000" id="mortgage-amount" name="amount"
+            <p class="amount-mon iconDesing">£</p>
+            <input class="check input-amount" type="number"    min="1" max="1000000" id="mortgage-amount" name="amount"
               spellcheck="false " onkeyup="amountValide()" />
           </div>
           <div class="box-error">
@@ -41,19 +41,21 @@
           <div class="dad-mortgage-term">
             <label for="mortgage-term" class="labelDisign">Mortgage Term</label>
             <div class="mortgage-term mortgage-desing">
-              <input class="" type="number" id="mortgage-term" min="1" max="70" name="term"  spellcheck="false "
+              <input class="check" type="number" id="mortgage-term" min="1" max="70" name="term"  spellcheck="false "
                 onkeyup="termValide()" />
-              <p class="mortgage-yrs changeColor">years</p>
+              <p class="mortgage-yrs iconDesing">years</p>
             </div>
-            <div class="box-error"></div>
-            <p class="error2 hidden">This field is required</p>
+            <div class="box-error">
+              <p class="error2 hidden">This field is required</p>
+
+            </div>
           </div>
           <div class="dad-mortgage-rate">
             <label for="mortgage-rate" class="labelDisign"> Interest Rate </label>
             <div class="mortgage-rate mortgage-desing">
-              <input class="" type="number" id="mortgage-rate" min="1" max="100" name="rate" 
+              <input class="check" type="number" id="mortgage-rate" min="1" max="100" name="rate" 
                 spellcheck="false " onkeyup="rateValide()" />
-              <p class="mortgage-psnt changeColor">%</p>
+              <p class="mortgage-psnt iconDesing">%</p>
             </div>
             <div class="box-error">
 
@@ -62,7 +64,7 @@
           </div>
         </div>
         <div class="dad-mortgage-type">
-          <label class="labelDisign">Mortgage Type</label>
+          <label class="typeRadio">Mortgage Type</label>
           <div class="radio-group">
             <input class="radio-input" name="option" id="radio1" type="radio"  >
             <label class="radio-label" for="radio1">
